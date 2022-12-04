@@ -1,0 +1,71 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-arrow-loop:before {
+	content: "\e900";
+ }
+ ._icon-arrow-right:before {
+	content: "\e901";
+ }
+ ._icon-arrows:before {
+	content: "\e902";
+ }
+ ._icon-calendar:before {
+	content: "\e903";
+ }
+ ._icon-Cart:before {
+	content: "\e904";
+ }
+ ._icon-copy:before {
+	content: "\e905";
+ }
+ ._icon-facebook:before {
+	content: "\e906";
+ }
+ ._icon-iakor:before {
+	content: "\e907";
+ }
+ ._icon-insta:before {
+	content: "\e908";
+ }
+ ._icon-logo:before {
+	content: "\e909";
+ }
+ ._icon-mail:before {
+	content: "\e90a";
+ }
+ ._icon-star:before {
+	content: "\e90b";
+ }
+ ._icon-telegramm:before {
+	content: "\e90c";
+ }
+ ._icon-Ticket-converted:before {
+	content: "\e90d";
+ }
+ ._icon-users:before {
+	content: "\e90e";
+ }
+ ._icon-vk:before {
+	content: "\e90f";
+ }
+ ._icon-whatsapp:before {
+	content: "\e910";
+ }
+ ._icon-youtube:before {
+	content: "\e911";
+ }
