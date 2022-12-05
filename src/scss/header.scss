@@ -1,19 +1,12 @@
 //====================================================================================================
-.-ibg{
-	padding-bottom: percent(656,1920);
-	@media (max-width:$mobile){
-		img{
-			height: 392px;
-			display: block;
-			position: absolute;
-			margin: auto;
-			top: 0px;
-			bottom: 0px;
-			left: 0px;
-			right: 0px;
-		}
+.header{
+	background: url("@img/header/bg.jpg") center/cover;
+	@media (max-width:320px){
+		background: url("@img/header/bg_mobile.jpg");
 	}
+	
 }
+
 //====================================================================================================
 
 //Burger
