@@ -90,8 +90,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.controls-header-slider__left',
+				nextEl: '.controls-header-slider__right',
 			},
 
 			// Брейкпоинты

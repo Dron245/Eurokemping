@@ -1,4 +1,22 @@
 <header class="header">
+	<div class="header__slider-controls controls-header-slider">
+		<div class="controls-header-slider__left"></div>
+		<div class="controls-header-slider__right"></div>
+	</div>
+	<div class="header__slider">
+		<div class="header__swiper">
+			<div class="header__slide">
+				<div class="header__slide-img -ibg">
+					<img src="@img/header/bg.jpg" alt="">
+				</div>
+			</div>
+			<div class="header__slide">
+				<div class="header__slide-img -ibg">
+					<img src="@img/header/bg.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="header__container">
 		<div class="header__top ">
 			<div class="header-top__pages pages-top">
@@ -12,12 +30,57 @@
 				<a href="#" class="center-header__link">О кемпинге</a>
 				<a href="#" class="center-header__link">Туристам</a>
 				<a href="#" class="center-header__link">Контакты</a>
-				<div href="#" class="center-header__link center-header__link_cirkle"></div>
+				<div href="#" class="center-header__link center-header__link_cirkle cirkle"></div>
 				<a href="#" class="center-header__link">Личный кабинет</a>
 			</div>
-			<div class="header-top__contacts"></div>
+			<div class="header-top__contacts contacts-header-top">
+				<a href="tel:+74951913292" class="contacts-header-top">+7 495 191-32-92</a>
+				<span>Позвонить</span>
+				<div class="contacts-header-top _icon-whatsapp"></div>
+				<div class="contacts-header-top _icon-telegramm"></div>
+			</div>
 		</div>
-		<div class="header__midle milde-header"></div>
-		<div class="header__bottom bottom-header"></div>
+		<div class="header__midle milde-header">
+			<div class="milde-header__logo _icon-logo"></div>
+			<ul class="milde-header__list">
+				<li><a href="#" class="milde-header__link">Услуги</a></li>
+				<li><a href="#" class="milde-header__link">Проживание</a></li>
+				<li><a href="#" class="milde-header__link">Программы</a></li>
+				<li><a href="#" class="milde-header__link">Виды отдыха</a></li>
+				<li><a href="#" class="milde-header__link">Активности</a></li>
+				<li><a href="#" class="milde-header__link">Мероприятия</a></li>
+				<li><a href="#" class="milde-header__link">Акции</a></li>
+			</ul>
+			<div class="milde-header__shops">
+				<div class="milde-header__shops-item">
+					<div class="milde-header__cart _icon-Cart"></div>
+					<span>В корзину</span>
+				</div>
+				<div class="milde-header__shops-item">
+					<div class="milde-header__cart _icon-Ticket-converted"></div>
+					<span>Забронировать</span>
+				</div>
+			</div>
+		</div>
+		<div class="header__bottom bottom-header">
+			<div class="bottom-header__transfer transfer">
+				<div class="transfer__calendar _icon-calendar"></div>
+				<a href="#" class="transfer__to">Заезд</a>
+				<span>&#8210</span>
+				<a href="#" class="transfer__from">Отъезд</a>
+			</div>
+			<div class="bottom-header__human human">
+				<div class="human__logo _icon-users"></div>
+				<div class="human__data data-human">
+					<div class="data-human__adults">2 взрослых</div>
+					<div class="cirkle"></div>
+					<div class="data-human__children">без детей</div>
+					<div class="cirkle"></div>
+					<div class="data-human__rooms">1 номер</div>
+				</div>
+				<div class="human__arrow _icon-arrows"></div>
+			</div>
+			<button type="submit" class="bottom-header__book button">Забронировать</button>
+		</div>
 	</div>
 </header>
