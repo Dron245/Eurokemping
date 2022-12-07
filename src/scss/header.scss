@@ -1,6 +1,342 @@
 //====================================================================================================
-.header{
+.header {
+	position: relative;
+	@media (max-width:$mobileSmall){
+		 background: url('../img/header/bg_mobile.jpg') top/cover no-repeat; 
+	}
+	// .header__slider-controls
+
+	&__arrow{
+		@media (min-width:$mobileSmall){
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			@include adaptiveValue("width", 56, 30);
+			@include adaptiveValue("height", 56, 30);
+			 border-radius: 50%;
+			 background-color: white; 
+			 z-index: 2;
+			 &::before{
+				position: absolute;
+				color: $orange;
+				display: inline-block;
+				top: 50%;
+				transform: translateY(-50%);
+			 }
+		}
+	}
+
+	&__slider-controls {
+
+	}
+
+	// .header__slider
+
+	&__slider {
+		@media (max-width:$mobileSmall){
+			display: none; 
+	  }
+	  @media (min-width:$mobileSmall){
+		 position: relative; 
+	  }
+	}
+
+	// .header__swiper
+
+	&__swiper {
+	}
+
+	// .header__slide
+
+	&__slide {
+		
+	}
+
+	// .header__slide-img
+
+	&__slide-img {
+		padding-bottom:percent(656,1920);
+	}
+
+	// .header__container
+
+	&__container {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		margin-top: 8px;
+	}
+
+	// .header__top
+
+	&__tops{
+		
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-weight: 500;
+		font-size: rem(14);
+		line-height: math.div(24 , 14);
+	}
+
+	// .header__midle
+
+	&__midle {
+		display: flex;
+		align-items: center;
+	}
+
+	// .header__bottom
+
+	&__bottom {
+	}
+}
+.controls-header-slider {
 	
+	
+	// .controls-header-slider__left
+
+	&__left {
+		left: 10%;
+		&::before{
+			left: 50%;
+			transform:rotate(180deg) translate(50%, 50%);
+		}
+	}
+
+	// .controls-header-slider__right
+
+	&__right {
+		right: 10%;
+		&::before{
+			@media (min-width:$mobileSmall){
+				transform: translate(-50%, -50%);
+				left: 50%; 
+			}
+		}
+	}
+}
+
+.header-top {
+
+	// .header-top__pages
+
+	&__pages {
+		display: flex;
+		gap: 4px;
+	}
+
+	// .header-top__center
+
+	&__center {
+		display: flex;
+		align-items: center;
+		gap: 16px;
+	}
+
+	// .header-top__contacts
+
+	&__contacts {
+		display: flex;
+		align-items: center;
+		
+	}
+}
+.pages-top {
+	a{
+		border-radius: 5px;
+		padding: 4px 8px;
+	}
+	// .pages-top__link
+
+	&__link {
+
+		// .pages-top__link_bg-green
+
+		&_bg-green {
+			background: rgba(94, 158, 2, 0.1);
+		}
+
+		// .pages-top__link_color-green
+
+		&_color-green {
+			color: #5E9E02;
+		}
+
+		// .pages-top__link_bg-blue
+
+		&_bg-blue {
+		}
+
+		// .pages-top__link_color-blue
+
+		&_color-blue {
+		}
+
+		// .pages-top__link_bg-orange
+
+		&_bg-orange {
+		}
+
+		// .pages-top__link_color-white
+
+		&_color-white {
+		}
+
+		// .pages-top__link_bg-pink
+
+		&_bg-pink {
+		}
+
+		// .pages-top__link_color-pink
+
+		&_color-pink {
+		}
+
+		// .pages-top__link_bg-white
+
+		&_bg-white {
+		}
+
+		// .pages-top__link_color-orange
+
+		&_color-orange {
+		}
+	}
+}
+.center-header {
+
+	// .center-header__link
+
+	&__link {
+
+		
+	}
+}
+
+.contacts-header-top {
+	a{
+		margin-right: 16px;
+	}
+	span{
+		margin-right: 36px;
+	}
+	&__social{
+		&:not(:last-child) {
+			margin-right:13px
+		}
+	}
+}
+
+.milde-header {
+
+	// .milde-header__logo
+
+	&__logo {
+	}
+
+	// .milde-header__list
+
+	&__list {
+	}
+
+	// .milde-header__link
+
+	&__link {
+	}
+
+	// .milde-header__shops
+
+	&__shops {
+	}
+
+	// .milde-header__shops-item
+
+	&__shops-item {
+	}
+
+	// .milde-header__cart
+
+	&__cart {
+	}
+}
+.bottom-header {
+
+	// .bottom-header__transfer
+
+	&__transfer {
+	}
+
+	// .bottom-header__human
+
+	&__human {
+	}
+
+	// .bottom-header__book
+
+	&__book {
+	}
+}
+.transfer {
+
+	// .transfer__calendar
+
+	&__calendar {
+	}
+
+	// .transfer__to
+
+	&__to {
+	}
+
+	// .transfer__from
+
+	&__from {
+	}
+}
+.human {
+
+	// .human__logo
+
+	&__logo {
+	}
+
+	// .human__data
+
+	&__data {
+	}
+
+	// .human__arrow
+
+	&__arrow {
+	}
+}
+.data-human {
+
+	// .data-human__adults
+
+	&__adults {
+	}
+
+	// .data-human__children
+
+	&__children {
+	}
+
+	// .data-human__rooms
+
+	&__rooms {
+	}
+}
+.button {
+}
+
+.swiper-button-disabled{
+	display: none;
 }
 
 //====================================================================================================
