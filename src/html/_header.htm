@@ -1,5 +1,7 @@
 <header class="header">
-	
+	<div class="header__mobilebg -ibg">
+		<img src="@img/header/bg_mobile.jpg" alt="">
+	</div>
 	<div class="header__slider">
 		<div class="header__swiper">
 			<div class="header__slide">
@@ -17,10 +19,30 @@
 			<div class="header__arrow controls-header-slider__left _icon-zarrow-control-converted"></div>
 			<div class="header__arrow controls-header-slider__right _icon-zarrow-control-converted"></div>
 		</div>
+		<div data-da=".header,767.98"  class="header__bottom bottom-header">
+			<div class="bottom-header__transfer transfer">
+				<div class="transfer__calendar _icon-calendar"></div>
+				<a href="#" class="transfer__to">Заезд</a>
+				<span>&#8210</span>
+				<a href="#" class="transfer__from">Отъезд</a>
+			</div>
+			<div class="bottom-header__human human">
+				<div class="human__logo _icon-users"></div>
+				<div class="human__data data-human">
+					<a href="#" class="data-human__adults">2 взрослых</a>
+					<div class="cirkle"></div>
+					<a href="#" class="data-human__children">без детей</a>
+					<div class="cirkle"></div>
+					<a href="#" class="data-human__rooms">1 номер</a>
+				</div>
+				<a href="#" class="human__arrow _icon-arrows"></a>
+			</div>
+			<button type="submit" class="bottom-header__book button">Забронировать</button>
+		</div>
 	</div>
 	<div class="header__container">
 		<div class="header__tops">
-			<div class="header__top ">
+			<div data-da=".milde-header__list,767.98" class="header__top ">
 				<div class="header-top__pages pages-top">
 					<a href="#" class="pages-top__link pages-top__link_bg-green pages-top__link_color-green">Лагеря</a>
 					<a href="#" class="pages-top__link pages-top__link_bg-blue pages-top__link_color-blue">Туры</a>
@@ -36,14 +58,17 @@
 					<a href="#" class="center-header__link">Личный кабинет</a>
 				</div>
 				<div class="header-top__contacts contacts-header-top">
-					<a href="tel:+74951913292" class="contacts-header-top">+7 495 191-32-92</a>
+					<a href="tel:+74951913292" class="contacts-header-top__link">+7 495 191-32-92</a>
 					<span>Позвонить</span>
-					<div class="contacts-header-top__social _icon-whatsapp"></div>
-					<div class="contacts-header-top__social _icon-telegramm"></div>
+					<a href="#" class="contacts-header-top__social _icon-whatsapp"></a>
+					<a href="#" class="contacts-header-top__social _icon-telegramm"></a>
 				</div>
 			</div>
-			<div class="header__midle milde-header">
-				<div class="milde-header__logo _icon-logo"></div>
+			<div class="header__midle milde-header ">
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+				</div>
+				<div class="milde-header__logo "><img src="@img/icons/logo.svg " alt=""></div>
 				<ul class="milde-header__list">
 					<li><a href="#" class="milde-header__link">Услуги</a></li>
 					<li><a href="#" class="milde-header__link">Проживание</a></li>
@@ -56,34 +81,14 @@
 				<div class="milde-header__shops">
 					<div class="milde-header__shops-item">
 						<div class="milde-header__cart _icon-Cart"></div>
-						<span>В корзину</span>
+						<a href="#">В корзину</a>
 					</div>
 					<div class="milde-header__shops-item">
 						<div class="milde-header__cart _icon-Ticket-converted"></div>
-						<span>Забронировать</span>
+						<a href="#">Забронировать</a>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="header__bottom bottom-header">
-			<div class="bottom-header__transfer transfer">
-				<div class="transfer__calendar _icon-calendar"></div>
-				<a href="#" class="transfer__to">Заезд</a>
-				<span>&#8210</span>
-				<a href="#" class="transfer__from">Отъезд</a>
-			</div>
-			<div class="bottom-header__human human">
-				<div class="human__logo _icon-users"></div>
-				<div class="human__data data-human">
-					<div class="data-human__adults">2 взрослых</div>
-					<div class="cirkle"></div>
-					<div class="data-human__children">без детей</div>
-					<div class="cirkle"></div>
-					<div class="data-human__rooms">1 номер</div>
-				</div>
-				<div class="human__arrow _icon-arrows"></div>
-			</div>
-			<button type="submit" class="bottom-header__book button">Забронировать</button>
 		</div>
 	</div>
 </header>
