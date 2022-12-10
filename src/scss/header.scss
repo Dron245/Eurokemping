@@ -390,6 +390,7 @@
 				background-color: white;
 			}
 			li{
+				display: flex;
 				margin-right: 0 !important;
 				padding: 12px 0px;
 				&:nth-child(2n+1){
