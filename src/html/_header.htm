@@ -68,13 +68,26 @@
 				<button type="button" class="menu__icon icon-menu"><span></span></button>
 				<div class="milde-header__logo "><img src="@img/icons/logo.svg " alt=""></div>
 				<ul class="milde-header__list">
-					<li><a href="#" class="milde-header__link">Услуги</a></li>
-					<li><a href="#" class="milde-header__link">Проживание</a></li>
-					<li><a href="#" class="milde-header__link">Программы</a></li>
-					<li><a href="#" class="milde-header__link">Виды отдыха</a></li>
-					<li><a href="#" class="milde-header__link">Активности</a></li>
-					<li><a href="#" class="milde-header__link">Мероприятия</a></li>
-					<li data-da=".milde-header__list, 767.96,8"><a href="#" class="milde-header__link">Акции</a></li>
+					<li data-spollers="767.98" class="milde-header__item">
+						<button data-spoller class="milde-header__button"><a href="#" class="milde-header__link">Услуги</a></button>
+						<ul class="milde-header__sublist">
+							<li class="milde-header__subitem">
+								<a href="#" class="milde-header__link">Для дома</a>
+							</li>
+							<li class="milde-header__subitem">
+								<a href="#" class="milde-header__link">Для дачи</a>
+							</li>
+							<li class="milde-header__subitem">
+								<a href="#" class="milde-header__link">Для гаража</a>
+							</li>
+						</ul>
+					</li>
+					<li class="milde-header__item"><a href="#" class="milde-header__link">Проживание</a></li>
+					<li class="milde-header__item"><a href="#" class="milde-header__link">Программы</a></li>
+					<li class="milde-header__item"><a href="#" class="milde-header__link">Виды отдыха</a></li>
+					<li class="milde-header__item"><a href="#" class="milde-header__link">Активности</a></li>
+					<li class="milde-header__item"><a href="#" class="milde-header__link">Мероприятия</a></li>
+					<li class="milde-header__item" data-da=".milde-header__list, 767.96,8"><a href="#" class="milde-header__link">Акции</a></li>
 				</ul>
 				<div class="milde-header__shops">
 					<div class="milde-header__shops-item">
@@ -87,6 +100,12 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div data-spollers class="spollers">
+		<div class="spollers__item">
+			<button type="button" data-spoller class="spollers__title">Заголовок спойлера</button>
+			<div class="spollers__body">Контент спойлера</div>
 		</div>
 	</div>
 </header>
