@@ -1,3 +1,139 @@
-//====================================================================================================
+//==========BANNER==========================================================================================
+.page {
 
-//====================================================================================================
+	// .page__banner
+
+	&__banner {
+		@include adaptiveValue("margin-top", 64, 56);
+	}
+}
+.banner {
+
+	// .banner__container
+
+	&__container {
+		//padding-bottom: percent(128, 1920);
+		img {
+			width: 100%;
+		}
+	}
+}
+
+//=========POPULAR===========================================================================================
+
+.page {
+
+	// .page__popular
+
+	&__popular {
+	}
+}
+.popular {
+
+	// .popular__title
+
+	&__title {
+		margin-top: rem(76);
+		font-weight: 700;
+		@include adaptiveValue("font-size", 48, 32);
+		text-align: center;
+		line-height: math.div(48 , 56);
+		@media (max-width:$mobile){
+			 margin-top: rem(40); 
+		}
+		@include adaptiveValue("padding-bottom", 50, 25);
+	}
+
+	&__swiper {
+		@media (min-width:$mobile){
+			 display: grid !important;
+			 grid-template-columns: repeat(3, 1fr);
+			 @include adaptiveValue("gap", 24, 15);
+		}
+	}
+	// .popular__house
+
+	&__house {
+	}
+
+	// .popular__item
+
+	&__item {
+		display: grid;
+		align-items: center;
+		grid-template-columns: percent(212,447) auto;
+		gap: rem(15);
+		@media (max-width:$mobile){
+			 grid-template-columns: 1fr;
+			 //grid-auto-flow: column;
+		}
+	}
+
+	&__pagination {
+		padding-top: 48px;
+	}
+}
+.house-popular {
+
+	// .house-popular_text
+
+	&_text {
+		font-weight: 600;
+		color: $orange;
+	}
+
+	// .house-popular__img
+
+	&__img {
+		//padding-bottom: percent(160, 1920);
+		img {
+			width: 100%;
+		}
+	}
+
+	// .house-popular__content
+
+	&__content {
+		// display: flex;
+		 height: 140px;
+		 overflow: hidden;
+		// flex-direction: column;
+		// justify-content: space-between;
+	}
+
+	// .house-popular__title
+
+	&__title {
+		font-weight: 700;
+		line-height: math.div(36 , 22);
+		@include adaptiveValue("font-size", 22, 18);
+		margin: 0px 0px 5px 0px;
+	}
+
+	// .house-popular__link
+
+	&__link {
+	}
+
+	// .house-popular__subtitle
+
+	&__subtitle {
+		margin: 0px 0px 8px 0px;
+		font-weight: 600;
+		line-height: math.div(24 , 16);
+		@include adaptiveValue("font-size", 16, 14);
+		overflow: hidden;
+	}
+
+	// .house-popular__text
+
+	&__text {
+		font-weight: 400;
+		@include adaptiveValue("font-size", 14, 12);
+		line-height: math.div(24 , 14);
+		color: #666F78;
+		@media (max-width:$mobile){
+			 font-weight: 500; 
+		}
+	}
+}

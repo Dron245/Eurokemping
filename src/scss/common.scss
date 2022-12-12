@@ -15,3 +15,27 @@
 	padding: 16px 32px;
 	border-radius: 0 10px 10px 0;
 }
+
+.dots {
+	margin: 0 auto;
+	display: grid;
+	grid-auto-flow: column;
+	justify-content: center;
+	align-items: center;
+	.swiper-pagination-bullet {
+		width: 8px;
+		height: 8px;
+		background: $orange;
+		opacity: 0.5;
+		border-radius: 50%;
+		margin: 0px rem(10);
+		transition: all 0.3s;
+		cursor: pointer;
+		}
+		
+	.swiper-pagination-bullet-active {
+		width: 12px;
+		height: 12px;
+		opacity: 1;
+	}
+}
