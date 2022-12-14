@@ -131,14 +131,14 @@ function initSliders() {
 			modules: [Pagination],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1.2,
+			slidesPerView: 1.3,
 			spaceBetween: 16,
 			autoHeight: true,
 			speed: 800,
-
+			centeredSlides:true,
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			loop: true,
 			//preloadImages: false,
 			//lazy: true,
 

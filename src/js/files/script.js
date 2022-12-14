@@ -21,7 +21,6 @@ for (let i = 0; i < populartext.length; i++) {
 	if(el.clientHeight<=70){
 		link.style.display='none'
 	} else {
-		console.log(el.style);
 		el.style.height=50+`${'px'}`;
 		el.style.overflow='hidden';
 		el.style.background='linear-gradient(180deg, #FFFFFF 50.46%, rgba(255, 255, 255, 0) 129.17%)'
@@ -29,3 +28,12 @@ for (let i = 0; i < populartext.length; i++) {
 	}
 }
 
+// правильное грид расположение
+
+const swiper = document.querySelector('.popular__swiper')
+
+if(swiper.childElementCount % 2 == 0){
+	swiper.lastElementChild.
+	//classList.toggle('_gridrows')
+	id ="gridrows"
+};
