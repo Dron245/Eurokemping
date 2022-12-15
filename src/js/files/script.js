@@ -37,3 +37,11 @@ if(swiper.childElementCount % 2 == 0){
 	//classList.toggle('_gridrows')
 	id ="gridrows"
 };
+
+const tip1 = document.querySelector('.map__tip_1');
+const asd = document.querySelector('.map__house');
+
+tip1.addEventListener("click", function(){
+	asd.style.right='0'
+})
+

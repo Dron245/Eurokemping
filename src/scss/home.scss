@@ -321,7 +321,7 @@
 	&__tour {
 		position: absolute;
 		z-index: 2;
-		top: 14.664023%;
+		top: 4.664023%;
 		left: percent(46,1392);
 		display: flex;
 		align-items: center;
@@ -380,6 +380,7 @@
 				left: 458px;
 			}
 			background-color: red;
+			
 		}
 
 		// .map__tip_2
@@ -410,8 +411,11 @@
 	// .map__house
 
 	&__house {
-		//position: absolute;
+		position: absolute;
 		max-width: 468px;
+		right: -100%;
+		top: 0;
+		transition: right 0.5s;
 	}
 }
 
@@ -420,12 +424,17 @@
 	// .house__items
 
 	&__items {
+		//position: absolute;
 	}
 
 	// .house__item
 
 	&__item {
 		position: relative;
+		z-index: 5;
+		background: #FAFAFB;
+		border-radius: 0px 20px 20px 0px;
+		padding: 48px 0px 16px 48px;
 	}
 
 	// .house__slider
@@ -464,7 +473,8 @@
 	// .house__arrows
 
 	&__arrows {
-		
+		display: flex;
+		justify-content: space-between;
 		//transform: translateY(-50%);
 		//@extend .controls-header-slider;
 		//cursor: pointer;
@@ -484,12 +494,25 @@
 
 	&__arrow {
 		position: absolute;
+		cursor: pointer;
 		top: 15%;
+		color: $orange;
+		width: 56px;
+		height: 56px;
+		border-radius: 50%;
+		background-color: rgb(255, 255, 255);
+		&::before{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		}
 		&_left {
-			
+			left: 45%;
+			transform: rotate(180deg);
 		}
 		&_right {
-			
+			right: 30%;
 		}
 	}
 }
