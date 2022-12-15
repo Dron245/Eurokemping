@@ -222,15 +222,7 @@
 		grid-template-columns: repeat(6, auto);
 			 grid-template-rows: auto auto;
 		@include adaptiveValue("gap", 24, 16);
-		&_01 {
-			 
-			
-		}
-
-		&_02 {
-
-		}
-
+		
 		&_03 {
 			grid-template-columns: repeat(3, auto);
 		}
@@ -285,3 +277,299 @@
 	color:$orange
 }
 
+/*=================MAP=============*/
+
+.page {
+
+	// .page__map
+
+	&__map {
+		margin-top: rem(95);
+		@media (max-width:$tablet){
+			margin-top: rem(40);
+		}
+	}
+}
+.map {
+
+	// .map__container
+
+	&__container {
+		position: relative;
+	}
+
+	// .map__title
+
+	&__title {
+		position: absolute;
+		z-index: 2;
+		top: 1.457507%;
+		left: percent(46,1392);
+		color: #333333;
+		font-weight: 700;
+		@include adaptiveValue("font-size", 48, 32);
+		line-height: math.div(58 , 48);
+		@media (max-width:$mobile){
+			 position: initial;
+			 text-align: center; 
+			 margin-bottom: rem(38);
+		}
+	}
+
+	// .map__tour
+
+	&__tour {
+		position: absolute;
+		z-index: 2;
+		top: 14.664023%;
+		left: percent(46,1392);
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 24px;
+		@media (max-width:$mobile){
+			font-size: 16px;
+			line-height: 1;
+			top: 20%;
+		}
+		&::before{
+			@include adaptiveValue("margin-right", 10, 6);
+		}
+	}
+
+	// .map__img
+
+	&__img {
+		overflow: auto;
+		position: relative;
+		img {
+			@media (min-width:$tablet){
+				max-width: 100%;
+				height: auto; 
+			}
+			@media (max-width:$tablet){
+				height: 430px;
+			}
+		}
+	}
+
+	// .map__tips
+
+	&__tips {
+		position: absolute;
+		 top: 0;
+		 left: 0;
+		 right: 0;
+		 bottom: 0;
+	}
+
+	// .map__tip
+
+	&__tip {
+		border-radius: 50%;
+		width: 35px;
+		height: 35px;
+		position: absolute;
+		// .map__tip_1
+
+		&_1 {
+			top: 46.6%;
+			left: 53.9%;
+			@media (max-width:$tablet){
+				left: 458px;
+			}
+			background-color: red;
+		}
+
+		// .map__tip_2
+
+		&_2 {
+			top: 62%;
+			left: 37%;
+			background-color: blue;
+			width: 45px;
+			height: 45px;
+			@media (max-width:$tablet){
+				left: 305px;
+			}
+		}
+
+		// .map__tip_3
+
+		&_3 {
+			top: 26%;
+			left: 69.5%;
+			background-color: green;
+			@media (max-width:$tablet){
+				 left: 587px; 
+			}
+		}
+	}
+
+	// .map__house
+
+	&__house {
+		//position: absolute;
+		max-width: 468px;
+	}
+}
+
+.house {
+
+	// .house__items
+
+	&__items {
+	}
+
+	// .house__item
+
+	&__item {
+		position: relative;
+	}
+
+	// .house__slider
+
+	&__slider {
+	}
+
+	// .house__swiper
+
+	&__swiper {
+	}
+
+	// .house__slide
+
+	&__slide {
+	}
+
+	// .house__slide-img
+
+	&__slide-img {
+	}
+
+	// .house__controls
+
+	&__controls {
+	}
+
+	// .house__pagination
+
+	&__pagination {
+		@media (min-width:$mobile){
+			 display: none; 
+		}
+	}
+
+	// .house__arrows
+
+	&__arrows {
+		
+		//transform: translateY(-50%);
+		//@extend .controls-header-slider;
+		//cursor: pointer;
+	}
+
+	// .house__content
+
+	&__content {
+	}
+
+	// .house__tabs
+
+	&__tabs {
+	}
+
+	// .house__arrow
+
+	&__arrow {
+		position: absolute;
+		top: 15%;
+		&_left {
+			
+		}
+		&_right {
+			
+		}
+	}
+}
+.dots {
+}
+.header {
+
+	// .header__arrow
+
+	&__arrow {
+	}
+}
+.controls-header-slider {
+
+	// .controls-header-slider__left
+
+	&__left {
+	}
+
+	// .controls-header-slider__right
+
+	&__right {
+	}
+}
+.house-popular {
+
+	// .house-popular__content
+
+	&__content {
+	}
+
+	// .house-popular__title
+
+	&__title {
+	}
+
+	// .house-popular__link
+
+	&__link {
+	}
+
+	// .house-popular__subtitle
+
+	&__subtitle {
+	}
+
+	// .house-popular__text
+
+	&__text {
+	}
+}
+.tabs-house {
+
+	// .tabs-house__item
+
+	&__item {
+	}
+
+	// .tabs-house__content
+
+	&__content {
+	}
+
+	// .tabs-house__data
+
+	&__data {
+	}
+
+	// .tabs-house__text
+
+	&__text {
+	}
+
+	// .tabs-house__button
+
+	&__button {
+	}
+
+	// .tabs-house__btn
+
+	&__btn {
+	}
+}

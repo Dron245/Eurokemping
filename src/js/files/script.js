@@ -12,8 +12,8 @@ function documentActions(e){
 		targetElement.closest('._spoller-init').classList.toggle('_pb')
 	}
 }
-
-const populartext = document.querySelectorAll('.house-popular__text')
+const popular = document.querySelector('.popular')
+const populartext = popular.querySelectorAll('.house-popular__text')
 
 for (let i = 0; i < populartext.length; i++) {
 	const el = populartext[i];

@@ -560,6 +560,7 @@
 	// .bottom-header__book
 
 	&__book {
+		border-radius: 0 10px 10px 0;
 		//padding: 0px 32px;
 		@media (max-width:$mobile){
 			width: 100%;
@@ -568,7 +569,7 @@
 	}
 }
 .transfer {
-
+	
 	// .transfer__calendar
 
 	&__calendar {
