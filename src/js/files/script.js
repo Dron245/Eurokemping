@@ -14,20 +14,42 @@ function documentActions(e){
 	//Открытие домика по клику на карте
 
 	if(targetElement.closest('.map__tip')){
-		console.log('1');
-		const map = document.querySelector('.map__house').classList.toggle('_active');
+		//console.log('1');
+		document.querySelector('.map__house').classList.add('_active');
 	}
-	if(targetElement.closest('.map__tip_1')){
-		document.querySelector('#house2').classList.toggle('_close-open');
-		document.querySelector('#house3').classList.toggle('_close-open');
+	if(!targetElement.closest('.map__tip')){
+		//console.log('2');
+		document.querySelector('.map__house').classList.remove('_active');
+		document.querySelectorAll('._close-open').forEach(element => {
+			element.classList.remove('_close-open')
+		});
 	}
-	if(targetElement.closest('.map__tip_2')){
-		document.querySelector('#house1').classList.toggle('_close-open');
-		document.querySelector('#house3').classList.toggle('_close-open');
+	if(targetElement.closest('.map__tip_1')){console.log('1');
+		document.querySelector('.map__house').classList.add('_active');
+		if (document.querySelectorAll('._close-open').length==0) {
+				document.querySelector('#house2').classList.add('_close-open');
+				document.querySelector('#house3').classList.add('_close-open');
+		}
+		// document.querySelector('#house2').classList.toggle('_close-open');
+		// document.querySelector('#house3').classList.toggle('_close-open');
 	}
-	if(targetElement.closest('.map__tip_3')){
-		document.querySelector('#house1').classList.toggle('_close-open');
-		document.querySelector('#house2').classList.toggle('_close-open');
+	if(targetElement.closest('.map__tip_2')){console.log('2');
+		document.querySelector('.map__house').classList.add('_active');
+		if (document.querySelectorAll('._close-open').length==0) {
+				document.querySelector('#house1').classList.add('_close-open');
+				document.querySelector('#house3').classList.add('_close-open');
+		}
+		// document.querySelector('#house2').classList.toggle('_close-open');
+		// document.querySelector('#house3').classList.toggle('_close-open');
+	}
+	if(targetElement.closest('.map__tip_3')){console.log('3');
+		document.querySelector('.map__house').classList.add('_active');
+		if (document.querySelectorAll('._close-open').length==0) {
+				document.querySelector('#house1').classList.add('_close-open');
+				document.querySelector('#house2').classList.add('_close-open');
+		}
+		// document.querySelector('#house2').classList.toggle('_close-open');
+		// document.querySelector('#house3').classList.toggle('_close-open');
 	}
 }
 const popular = document.querySelector('.popular')
