@@ -114,7 +114,7 @@
 
 	&__content {
 		// display: flex;
-		 height: 140px;
+		 //height: 140px;
 		 overflow: hidden;
 		// flex-direction: column;
 		// justify-content: space-between;
@@ -321,7 +321,7 @@
 	&__tour {
 		position: absolute;
 		z-index: 2;
-		top: 4.664023%;
+		top: 14.664023%;
 		left: percent(46,1392);
 		display: flex;
 		align-items: center;
@@ -416,6 +416,9 @@
 		right: -100%;
 		top: 0;
 		transition: right 0.5s;
+		&._active {
+			right: 0;
+		}
 	}
 }
 
@@ -435,6 +438,12 @@
 		background: #FAFAFB;
 		border-radius: 0px 20px 20px 0px;
 		padding: 48px 0px 16px 48px;
+		&._close-open {
+			display: none;
+		}
+		@media (max-width:$mobile){
+			 padding: 0px 0px 0px 0px; 
+		}
 	}
 
 	// .house__slider
@@ -460,6 +469,9 @@
 	// .house__controls
 
 	&__controls {
+		@media (max-width:$mobile){
+			 margin-top: rem(16); 
+		}
 	}
 
 	// .house__pagination
@@ -467,6 +479,9 @@
 	&__pagination {
 		@media (min-width:$mobile){
 			 display: none; 
+		}
+		span {
+			margin: 0px 6px !important;
 		}
 	}
 
@@ -483,11 +498,18 @@
 	// .house__content
 
 	&__content {
+		margin-top: rem(30);
+		padding-right: 42px;
+		margin-bottom: 30px;
+		@media (max-width:$mobile){
+			 margin-top: rem(20); 
+		}
 	}
 
 	// .house__tabs
 
 	&__tabs {
+		padding-right: 42px;
 	}
 
 	// .house__arrow
@@ -497,8 +519,10 @@
 		cursor: pointer;
 		top: 15%;
 		color: $orange;
-		width: 56px;
-		height: 56px;
+		// width: 56px;
+		// height: 56px;
+		@include adaptiveValue("width", 56, 20);
+		@include adaptiveValue("height", 56, 20);
 		border-radius: 50%;
 		background-color: rgb(255, 255, 255);
 		&::before{
@@ -517,12 +541,14 @@
 	}
 }
 .dots {
+	
 }
 .header {
 
 	// .header__arrow
 
 	&__arrow {
+		
 	}
 }
 .controls-header-slider {
@@ -569,6 +595,11 @@
 	// .tabs-house__item
 
 	&__item {
+		display: flex;
+		justify-content: space-between;
+		border-top: 1px solid #E6E6E6;
+		padding: 15px 42px;
+		margin: 0px -42px;
 	}
 
 	// .tabs-house__content
@@ -579,6 +610,8 @@
 	// .tabs-house__data
 
 	&__data {
+		line-height: math.div(24 , 16);
+		margin-bottom: 5px;
 	}
 
 	// .tabs-house__text
@@ -594,5 +627,10 @@
 	// .tabs-house__btn
 
 	&__btn {
+		padding: 16px;
+		&::before{
+			font-size: 8px;;
+			
+		}
 	}
 }

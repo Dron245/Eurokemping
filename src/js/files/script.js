@@ -8,12 +8,31 @@ document.addEventListener('click', documentActions)
 function documentActions(e){
 	const targetElement = e.target
 	if (targetElement.closest('.milde-header__button')){
-		console.log('t');
 		targetElement.closest('._spoller-init').classList.toggle('_pb')
+	}
+
+	//Открытие домика по клику на карте
+
+	if(targetElement.closest('.map__tip')){
+		console.log('1');
+		const map = document.querySelector('.map__house').classList.toggle('_active');
+	}
+	if(targetElement.closest('.map__tip_1')){
+		document.querySelector('#house2').classList.toggle('_close-open');
+		document.querySelector('#house3').classList.toggle('_close-open');
+	}
+	if(targetElement.closest('.map__tip_2')){
+		document.querySelector('#house1').classList.toggle('_close-open');
+		document.querySelector('#house3').classList.toggle('_close-open');
+	}
+	if(targetElement.closest('.map__tip_3')){
+		document.querySelector('#house1').classList.toggle('_close-open');
+		document.querySelector('#house2').classList.toggle('_close-open');
 	}
 }
 const popular = document.querySelector('.popular')
 const populartext = popular.querySelectorAll('.house-popular__text')
+console.log(populartext);
 
 for (let i = 0; i < populartext.length; i++) {
 	const el = populartext[i];
@@ -41,7 +60,5 @@ if(swiper.childElementCount % 2 == 0){
 const tip1 = document.querySelector('.map__tip_1');
 const asd = document.querySelector('.map__house');
 
-tip1.addEventListener("click", function(){
-	asd.style.right='0'
-})
+
 
