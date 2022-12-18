@@ -331,7 +331,8 @@
 		@media (max-width:$mobile){
 			font-size: 16px;
 			line-height: 1;
-			top: 20%;
+			top: 4.5%;
+			left: 4.5%;
 		}
 		&::before{
 			@include adaptiveValue("margin-right", 10, 6);
@@ -344,11 +345,11 @@
 		overflow: auto;
 		position: relative;
 		img {
-			@media (min-width:$tablet){
+			@media (min-width:$mobile){
 				max-width: 100%;
-				height: auto; 
+				height: auto;
 			}
-			@media (max-width:$tablet){
+			@media (max-width:$mobile){
 				height: 430px;
 			}
 		}
@@ -419,7 +420,15 @@
 		&._active {
 			right: 0;
 		}
+		@media (max-width:$mobile){
+		position: relative;
+		right: 0;
+		min-width: 100%;
+		margin-top: rem(25);
+		
+		}
 	}
+	
 }
 
 .house {
@@ -443,14 +452,18 @@
 		}
 		@media (max-width:$mobile){
 			 padding: 0px 0px 0px 0px; 
+			 background: white;
 		}
 	}
 
 	// .house__slider
 
 	&__slider {
+		position: relative;
+		@media (max-width:$mobile){
+			overflow: initial !important;
+		}
 	}
-
 	// .house__swiper
 
 	&__swiper {
@@ -464,6 +477,10 @@
 	// .house__slide-img
 
 	&__slide-img {
+		img {
+			min-width: 100%;
+			height: auto;
+		}
 	}
 
 	// .house__controls
@@ -490,9 +507,9 @@
 	&__arrows {
 		display: flex;
 		justify-content: space-between;
-		//transform: translateY(-50%);
-		//@extend .controls-header-slider;
-		//cursor: pointer;
+		@media (max-width:$mobile){
+			 display: none; 
+		}
 	}
 
 	// .house__content
@@ -502,7 +519,8 @@
 		padding-right: 42px;
 		margin-bottom: 30px;
 		@media (max-width:$mobile){
-			 margin-top: rem(20); 
+			 margin-top: rem(20);
+			 padding-right: 0;
 		}
 	}
 
@@ -510,6 +528,9 @@
 
 	&__tabs {
 		padding-right: 42px;
+		@media (max-width:$mobile){
+			 padding-right: 0; 
+		}
 	}
 
 	// .house__arrow
@@ -517,7 +538,7 @@
 	&__arrow {
 		position: absolute;
 		cursor: pointer;
-		top: 15%;
+		top: 40%;
 		color: $orange;
 		// width: 56px;
 		// height: 56px;
@@ -532,11 +553,17 @@
 			transform: translate(-50%,-50%);
 		}
 		&_left {
-			left: 45%;
+			left: 35%;
 			transform: rotate(180deg);
+			@media (max-width:$tablet){
+				left: 50%;
+			}
 		}
 		&_right {
-			right: 30%;
+			left: 50%;
+			@media (max-width:$tablet){
+				left: 69%;
+			}
 		}
 	}
 }
@@ -600,11 +627,18 @@
 		border-top: 1px solid #E6E6E6;
 		padding: 15px 42px;
 		margin: 0px -42px;
+		@media (max-width:$mobile){
+			background: #F0F4F5;
+			//box-shadow: inset 0px -1px 0px #E6E6E6, inset 0px 1px 0px #E6E6E6; 
+		}
 	}
 
 	// .tabs-house__content
 
 	&__content {
+		@media (max-width:$mobile){
+			 font-size: rem(14); 
+		}
 	}
 
 	// .tabs-house__data

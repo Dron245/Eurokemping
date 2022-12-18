@@ -76,6 +76,8 @@ function mapInit(n = 1) {
 	}
 }
 if (document.querySelector('#map')) {
+	console.log('123');
+	
 	mapAdd();
 }
 

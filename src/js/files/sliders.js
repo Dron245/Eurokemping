@@ -253,21 +253,26 @@ function initSliders() {
 			},
 
 			// Брейкпоинты
-			/*
 			breakpoints: {
-				320: {
-					slidesPerView: 1,
-					spaceBetween: 0,
+			320: {
+					slidesPerView: 1.36,
+					spaceBetween: 15,
 					autoHeight: true,
+			},
+			992: {
+					//slidesPerView: 1.4,
+					spaceBetween: 15,
 				},
+				},
+			/*
+			
+				
+				
 				768: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
+				
 				1268: {
 					slidesPerView: 4,
 					spaceBetween: 30,
