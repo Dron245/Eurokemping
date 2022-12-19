@@ -52,6 +52,74 @@ function documentActions(e){
 		document.querySelector('#house1').classList.add('_close-open');
 		document.querySelector('#house2').classList.add('_close-open');
 	}
+
+
+	//Построение маршрута на карте
+
+	if(targetElement.closest('.m')){
+		ymaps.ready(function () {
+
+			let myMap = new ymaps.Map('map', {
+			  center: [56.813895228303046,34.901987332335786],
+			  zoom: 7,
+			  controls: ['routePanelControl']
+			});
+		 
+			let control = myMap.controls.get('routePanelControl');
+			let city = 'Москва';
+		
+		 
+				 control.routePanel.state.set({
+					type: 'masstransit',
+					fromEnabled: false,
+					from: `${city}`,
+					toEnabled: true,
+					to: `Россия, Новгородская область, Валдайский район, Ивантеевское сельское поселение`,
+				});
+		
+			  control.routePanel.options.set({
+				 types: {
+					auto:true,
+				 }
+			  })
+			}
+		)
+		if (document.querySelector('.ymaps-2-1-79-map')){
+			document.querySelector('.ymaps-2-1-79-map').remove()
+		}
+	}
+	if(targetElement.closest('.spb')){
+		ymaps.ready(function () {
+
+			let myMap = new ymaps.Map('map', {
+			  center: [56.813895228303046,34.901987332335786],
+			  zoom: 7,
+			  controls: ['routePanelControl']
+			});
+		 
+			let control = myMap.controls.get('routePanelControl');
+			let city = 'Санкт-Петербург';
+		
+		 
+				 control.routePanel.state.set({
+					type: 'masstransit',
+					fromEnabled: false,
+					from: `${city}`,
+					toEnabled: true,
+					to: `Россия, Новгородская область, Валдайский район, Ивантеевское сельское поселение`,
+				});
+		
+			  control.routePanel.options.set({
+				 types: {
+					auto:true,
+				 }
+			  })
+			}
+		)
+		if (document.querySelector('.ymaps-2-1-79-map')){
+			document.querySelector('.ymaps-2-1-79-map').remove()
+		}
+	}
 }
 const popular = document.querySelector('.popular')
 const populartext = popular.querySelectorAll('.house-popular__text')
@@ -82,25 +150,6 @@ if(swiper.childElementCount % 2 == 0){
 
 
 
-// let center = [56.813895228303046,34.901987332335786];
-
-// function init() {
-// 	let map = new ymaps.Map('map', {
-// 		center: center,
-// 		zoom: 7
-// 	});
-
-// 	map.controls.remove('geolocationControl'); // удаляем геолокацию
-//   map.controls.remove('searchControl'); // удаляем поиск
-//   map.controls.remove('trafficControl'); // удаляем контроль трафика
-//   map.controls.remove('typeSelector'); // удаляем тип
-//   map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
-//   map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-//   map.controls.remove('rulerControl'); // удаляем контрол правил
-//   map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-// }
-
-//ymaps.ready(init);
 
 ymaps.ready(function () {
 
@@ -112,32 +161,7 @@ ymaps.ready(function () {
  
 	let control = myMap.controls.get('routePanelControl');
 	let city = 'Москва';
- 
-	// let location = ymaps.geolocation.get();
- 
-	// location.then(function(res) {
-	// 	let locationText = res.geoObjects.get(0).properties.get('text');
-	// 	console.log(locationText)
-	// });
- 
-	// const options = {
-	//   enableHighAccuracy: true,
-	//   timeout: 5000,
-	//   maximumAge: 0
-	// };
- 
-	// function success(pos) {
-	//   const crd = pos.coords;
- 
-	//   console.log(`Latitude : ${crd.latitude}`);
-	//   console.log(`Longitude: ${crd.longitude}`);
- 
- 
-	//   let reverseGeocoder = ymaps.geocode([crd.latitude, crd.longitude]);
-	//   let locationText = null;
-	//   reverseGeocoder.then(function (res) {
-	// 	 locationText = res.geoObjects.get(0).properties.get('text')
-	// 	 console.log(locationText)
+
  
 		 control.routePanel.state.set({
 			type: 'masstransit',
@@ -145,32 +169,12 @@ ymaps.ready(function () {
 			from: `${city}`,
 			toEnabled: true,
 			to: `Россия, Новгородская область, Валдайский район, Ивантеевское сельское поселение`,
-			//to: `57.734648, 33.088664`,
-		 });
-	 // });
- 
-	  //console.log(locationText)
- 
-	  
- 
+		});
+
 	  control.routePanel.options.set({
 		 types: {
 			auto:true,
-			//masstransit: true,
-			//pedestrian: true,
-			//taxi: true
 		 }
 	  })
 	}
- 
-// 	function error(err) {
-// 	  console.warn(`ERROR(${err.code}): ${err.message}`);
-// 	}
- 
-// 	navigator.geolocation.getCurrentPosition(success, error, options);
- 
- 
- 
-//  });
-
 )
