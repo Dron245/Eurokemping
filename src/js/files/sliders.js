@@ -90,8 +90,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.controls-header-slider__left',
-				nextEl: '.controls-header-slider__right',
+				prevEl: '.review__arrow_left',
+				nextEl: '.review__arrow_right',
 			},
 
 			// Брейкпоинты
