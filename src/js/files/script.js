@@ -23,7 +23,9 @@ function documentActions(e){
 	if(!targetElement.closest('.map__tip') && !targetElement.closest('.house__items')){
 		map.classList.remove('_active');
 		closeOne.forEach(element => {
-			element.classList.remove('_close-open')
+			setTimeout(() => {
+				element.classList.remove('_close-open')
+			}, 500);
 		});
 	}
 
@@ -35,6 +37,7 @@ function documentActions(e){
 		}
 		document.querySelector('#house2').classList.add('_close-open');
 		document.querySelector('#house3').classList.add('_close-open');
+		
 	}
 	if(targetElement.closest('.map__tip_2')){
 		map.classList.add('_active');
