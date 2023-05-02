@@ -126,7 +126,7 @@ function documentActions(e){
 }
 const popular = document.querySelector('.popular')
 const populartext = popular.querySelectorAll('.house-popular__text')
-console.log(populartext);
+
 
 for (let i = 0; i < populartext.length; i++) {
 	const el = populartext[i];

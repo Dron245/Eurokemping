@@ -49,7 +49,7 @@ function initSliders() {
 		new Swiper('.header__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
@@ -73,12 +73,12 @@ function initSliders() {
 			*/
 
 			// Пагинация
-			/*
+			
 			pagination: {
-				el: '.swiper-pagination',
+				el: '.header__pagination-swiper',
 				clickable: true,
 			},
-			*/
+			
 
 			// Скроллбар
 			/*
