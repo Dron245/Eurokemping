@@ -753,15 +753,15 @@ h6 {
           box-shadow: inset 1px 0px 0px #E3E1E1;
 }
 
-@supports (width: clamp( 21.875rem , 18.8399284475rem  +  6.3313096271vw , 26.4375rem )) {
+@supports (width: clamp( 21.875rem , 18.8333993412rem  +  6.336750549vw , 26.4375rem )) {
   .bottom-header__human {
-    width: clamp( 21.875rem , 18.8399284475rem  +  6.3313096271vw , 26.4375rem );
+    width: clamp( 21.875rem , 18.8333993412rem  +  6.336750549vw , 26.4375rem );
   }
 }
 
-@supports not (width: clamp( 21.875rem , 18.8399284475rem  +  6.3313096271vw , 26.4375rem )) {
+@supports not (width: clamp( 21.875rem , 18.8333993412rem  +  6.336750549vw , 26.4375rem )) {
   .bottom-header__human {
-    width: calc(21.875rem + 4.5625 * (100vw - 47.9375rem) / 72.0625);
+    width: calc(21.875rem + 4.5625 * (100vw - 47.999375rem) / 72.000625);
   }
 }
 
@@ -2406,8 +2406,6 @@ h6 {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-    -webkit-box-shadow: none;
-            box-shadow: none;
     -webkit-box-shadow: inset 0px 1px 0px #E3E1E1;
             box-shadow: inset 0px 1px 0px #E3E1E1;
     width: 100%;
@@ -2706,10 +2704,6 @@ h6 {
 
 @media (max-width: 47.9375em) {
   .bottom-header__transfer {
-    width: inherit;
-  }
-
-  .bottom-header__human {
     width: inherit;
   }
 }
